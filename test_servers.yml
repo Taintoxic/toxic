@@ -1,0 +1,10 @@
+t_servers:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  hosts:
+    server01:
+      ansible_ssh_host:  172.26.114.77
+      ansible_ssh_port: 22
+    server02:
+      ansible_ssh_host:  172.26.114.43
+      ansible_ssh_port: 22 

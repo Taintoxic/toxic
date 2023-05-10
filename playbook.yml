@@ -1,0 +1,12 @@
+# LEMP PLAYBOOK
+- hosts: all
+  #ignore_errors: true
+  become: true
+ # become_method: sudo
+ # become_user: root
+  remote_user: slave
+  tasks:
+  - name: Installnginx
+    yum:
+      name: nginx
+      state: present

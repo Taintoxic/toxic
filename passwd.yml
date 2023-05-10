@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Remove cat
+      user:
+        name: cat
+        state: absent
+        remove: yes

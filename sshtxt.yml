@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: ssh
+    file:
+      dest: /home/ssh/ssh1.txt
+      state: touch
+      owner: root
+      group: wheel
+      mode: 0644
+  - name: 
+    ios_command:
+      commands: sh ip int br
+    register: sh_ip_int_br_result
+

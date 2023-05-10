@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Add user
+    user: 
+      name: cat
+      password: "{{ lookup('file', '/home/sisadm/ansible/passwd.txt') }}"
+      shell: /bin/bash      
+      group: wheel
+      append: yes
+  - name: Установить authorized key из файла id_rsa.pub
+    authorized_key:
+      user: cat
+      state: present
+      key: "{{ lookup('file', '/home/sisadm/.ssh/id_rsa.pub') }}"

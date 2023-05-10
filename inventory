@@ -1,0 +1,4 @@
+[servers]
+slave@slave1
+slave@slave2
+cat@slave1

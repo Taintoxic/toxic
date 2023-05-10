@@ -1,0 +1,18 @@
+# LEMP PLAYBOOK
+---
+#- hosts: all
+# become: true
+ # tasks:
+ # - name: Installs apache web server
+ #   yum:
+ #     pkg: apache2
+ #     state: present
+ #     update_cache: true
+- hosts: all
+  become: true
+  tasks:
+    - name: Installs apache web server
+      yum:
+        name=httpd
+        state=absent
+        update_cache=true
