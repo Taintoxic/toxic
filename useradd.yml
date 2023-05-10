@@ -4,7 +4,7 @@
   tasks:
   - name: Add user
     user: 
-      name: kot
+      name: kot42
       password: $6$YrPG2ZAuFkdUoXVB$XnQH.To7pQkZQJkWGckPaMXoJ0NqnrAjVW5/38Ko.dVJs0fdslL2/W8Ifsl2zfN1wEF7r6VZZZ3KhD1JnjEU30
       shell: /bin/bash      
       group: wheel
