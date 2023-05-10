@@ -4,13 +4,9 @@
   tasks:
   - name: Add user
     user: 
-      name: cat
-      password: "{{ lookup('file', '/home/sisadm/ansible/passwd.txt') }}"
+      name: kot
+      password: $6$YrPG2ZAuFkdUoXVB$XnQH.To7pQkZQJkWGckPaMXoJ0NqnrAjVW5/38Ko.dVJs0fdslL2/W8Ifsl2zfN1wEF7r6VZZZ3KhD1JnjEU30
       shell: /bin/bash      
       group: wheel
       append: yes
-  - name: Установить authorized key из файла id_rsa.pub
-    authorized_key:
-      user: cat
-      state: present
-      key: "{{ lookup('file', '/home/sisadm/.ssh/id_rsa.pub') }}"
+
